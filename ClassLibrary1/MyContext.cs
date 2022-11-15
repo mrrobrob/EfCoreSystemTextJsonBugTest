@@ -12,6 +12,9 @@ namespace EfCoreSystemTextJsonBugTest
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer();
+
+            var thing = System.Text.Json.JsonSerializer.Serialize("testing");
+            Console.WriteLine(thing);
         }
     }
 }
